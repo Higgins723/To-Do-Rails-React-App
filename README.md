@@ -10,3 +10,4 @@
   * `-T` will exclude Minitest so that we can use RSpec instead
 
 * For Dependencies check inside the `Gemfile`
+	* Don't forget to run `bundle install` after adding dependencies
