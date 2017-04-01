@@ -1,5 +1,10 @@
+# spec/models/item_spec.rb
 require 'rails_helper'
 
+# Test suite for the Item model
 RSpec.describe Item, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  # ensure an item record belongs to a single todo record
+  it { should belong_to(:todo) }
+  # ensure column name is present before saving
+  it { should validate_presence_of(:name) }
 end
