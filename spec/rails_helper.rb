@@ -26,3 +26,9 @@ RSpec.configuration do |config|
     end
   end
 end
+
+# spec/rails_helper.rb
+Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+RSpec.configuration do |config|
+  config.include RequestSpecHelper, type: :request
+end
